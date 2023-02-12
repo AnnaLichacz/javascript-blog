@@ -67,9 +67,11 @@ function generateTitleLinks(customSelector = ''){
 
     /* find the title element */
 
-    const titleElement = article.querySelector(opts.titleSelector);
+    const titleElement = article.querySelector(optTitleSelector);
 
     /* get the title from the title element */
+
+    const articleTitle = article.querySelector(optTitleSelector).innerHTML;
 
     const title = titleElement.innerHTML;
 
