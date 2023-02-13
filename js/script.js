@@ -103,7 +103,7 @@ function generateTags(){
   
   /* find all articles */
 
-  const articles = document.querySelectorAll(opts.articleSelector);
+  const articles = document.querySelectorAll(optArticleSelector);
 
   /* START LOOP: for every article: */
 
@@ -141,7 +141,6 @@ function generateTags(){
 
     /* END LOOP: for each tag */
   }
-  
     /* insert HTML of all the links into the tags wrapper */
 
     tagsWrapper.innerHTML = html;
