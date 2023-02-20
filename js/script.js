@@ -127,7 +127,7 @@ function generateTags(){
 
       /* generate HTML of the link */
 
-      const tagLinkHTML = '<li><a href="#tag-' + articleTagsArray + '">' + articleTagsArray + '</a></li>';
+      const tagLinkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
 
       /* add generated code to html variable */
 
@@ -253,6 +253,8 @@ function generateAuthors(){
     authorWrapper.innerHTML = html;
   }  
 }
+
+generateAuthors();
 
 function authorClickHandler(event){
 
