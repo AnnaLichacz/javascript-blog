@@ -195,9 +195,10 @@ function generateTags(){
   for(let tag in allTags){
 
     /* [NEW] generate code of a link and add it to allTAGSHTML */
-    allTagsHTML += tagLinkHTML;
-
+    
     const tagLinkHTML = '<li><a href="#tag-' + tag + calculateTagClass(allTags[tag], tagsParams) + '">' + tag + '</a></li>';
+    
+    allTagsHTML += tagLinkHTML;
     console.log('tagLinkHTML:', tagLinkHTML);
 
     /* [NEW] END LOOP: for each tag in allTags: */
@@ -321,10 +322,10 @@ function generateAuthors(){
 
     /* [NEW] check if this link is NOT already in allAuthors */
 
-    if (!allAuthors.hasOwnProperty(author)){
-      allAuthors[author] = 1;
+    if(!allAuthors.hasOwnProperty(articleAuthor)){
+      allAuthors[articleAuthor] = 1;
     } else {
-      allAuthors[author]++;
+      allAuthors[articleAuthor]++;
     }
 
     /* insert HTML of all the links into the author wrapper*/
