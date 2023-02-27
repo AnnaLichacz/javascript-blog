@@ -47,10 +47,10 @@ const optArticleSelector = '.post',
   optTitleListSelector = '.titles',
   optArticleTagsSelector = '.post-tags .list',
   optArticleAuthorSelector = '.post .post-author',
-  optTagsListSelector = '.tags .list',
+  optTagsListSelector = '.tags.list',
   optCloudClassCount = 5,
   optCloudClassPrefix = 'tag-size-',
-  optAuthorsListSelector = '.authors .list';
+  optAuthorsListSelector = '.authors.list';
 
 function generateTitleLinks(customSelector = ''){
 
@@ -196,7 +196,7 @@ function generateTags(){
 
     /* [NEW] generate code of a link and add it to allTAGSHTML */
     
-    const tagLinkHTML = '<li><a href="#tag-' + tag + calculateTagClass(allTags[tag], tagsParams) + '">' + tag + '</a></li>';
+    const tagLinkHTML = '<li><a href="#tag-' + tag + ' " class=" ' + calculateTagClass(allTags[tag], tagsParams) + '">' + tag + '</a></li>';
     
     allTagsHTML += tagLinkHTML;
     console.log('tagLinkHTML:', tagLinkHTML);
@@ -344,9 +344,8 @@ function generateAuthors(){
 
   for (let author in allAuthors){
 
+    const authorsLinkHTML =  '<li><a href="#author' + author + '">' + author + " (" + allAuthors[author] + ")" + "</a></li>";
     allAuthorsHTML += authorsLinkHTML;
-
-    const authorsLinkHTML = '<li><a href="#author-' + author + (allAuthors[author]) + ' ">' + author + '</a></li>';
   }
 
   authorsList.innerHTML = allAuthorsHTML;

@@ -129,19 +129,27 @@ body {
 }
 
 .tag-size-1{
-  font-size: 15px;
-  text-decoration: none;
+  font-size: 15px;;
 }
 
 .tag-size-2{
   font-size:17px;
 }
+
 .tag-size-3{
   font-size:25px;
 }
+
 .tag-size-4{
   font-size:28px;
 }
+
 .tag-size-5{
   font-size:34px;
+}
+
+.list.tags {
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
 }
